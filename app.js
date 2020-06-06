@@ -31,8 +31,6 @@ fetch(url)
   
       fs.writeFileSync('data.json', JSON.stringify(json));
 
-      console.log(json);
-
       app.get('/', function (req, res) {
         res.render('main.pug', { data: JSON.stringify(json) });
       });
