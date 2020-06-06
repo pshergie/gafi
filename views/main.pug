@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Greed and Fear Index
+    script(src="https://code.highcharts.com/highcharts.js")
+  body
+    h1 Greed and Fear Index
+    div#container(style="width:100%; height:400px;")
+
+    script.
+      document.addEventListener('DOMContentLoaded', function () {
+        const records = JSON.parse('!{data}');
+        console.log(records);
+        Highcharts.chart('container', {
+          title: {
+            text: 'Greed & Fear Index'
+          },
+          xAxis: {
+            categories: records.map(record => record.date)
+          },
+          yAxis: {
+            title: {
+                text: 'Index'
+            }
+          },
+          series: [{
+            name: 'Index',
+            data: records.map(record => Number(record.index))
+          }]
+        });
+      });
