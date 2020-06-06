@@ -2,7 +2,6 @@ const express = require('express');
 const fetch = require('node-fetch');
 const cheerio = require('cheerio');
 const fs = require('fs');
-const path = require('path');
 
 const app = express();
 app.engine('pug', require('pug').__express)
