@@ -5,8 +5,8 @@ const cheerio = require('cheerio');
 const fs = require('fs');
 
 const app = express(); // инициализируем express (что это? https://expressjs.com/ru/)
-const url = 'https://money.cnn.com/data/fear-and-greed/'; // адрес нужного сайта
-const selector = '#needleChart ul li:first-child'; // необходимый селектор на странице
+const url = ''; // адрес нужного сайта
+const selector = '#needleChart ul li:first-child'; // необходимый элемент на странице
 
 // вызываем функцию, которая делает основную работу
 fetch(url)
